@@ -30,5 +30,5 @@ Practice with Passport.js authentication
     session:{
         cookieKey:'your_random_key_for_encryption'
     }
-}
+  }
   ```
