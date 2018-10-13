@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Profile</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <% if(user){%>
+            <li>
+                <a href="/auth/logout">Logout</a>
+            </li>
+            <% } else { %>
+            <li>
+                <a href="/auth/login">Login</a>
+            </li>
+            <% } %>
+            <li>
+                <a href="/">Homepage</a>
+            </li>
+        </ul>
+    </nav>
+    <header>
+        <h1>Welcome to your profile</h1>
+        <h2><%= user.username %></h2>
+        <img src="<%= user.thumbnail %>" width="130"/>
+    </header>
+    <main>
+        <p>horayyy you did it!</p>
+    </main>
+</body>
+</html>

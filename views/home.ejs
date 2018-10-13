@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Oauth Passport.js</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <% if(user){%>
+            <li>
+                <a href="/auth/logout">Logout</a>
+            </li>
+            <li>
+                <a href="/profile">Profile</a>
+            </li>
+            <% } else { %>
+            <li>
+                <a href="/auth/login">Login</a>
+            </li>
+            <% } %>
+        </ul>
+    </nav>
+    <header>
+        <h2>Homepage</h2>
+    </header>
+    <main>
+        <p>Simple authentication method using passport js. Enjoy!</p>
+    </main>
+</body>
+</html>
