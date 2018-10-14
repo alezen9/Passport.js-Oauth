@@ -26,7 +26,9 @@
     </nav>
     <header>
         <h1>Welcome to your profile</h1>
+        <h3>You logged in using <%= user.provider %></h3>
         <h2><%= user.username %></h2>
+        <h2><%= user.email %></h2>
         <img src="<%= user.thumbnail %>" width="130"/>
     </header>
     <main>

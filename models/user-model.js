@@ -6,6 +6,8 @@ const userSchema = new Schema({
     provider: String,
     githubId: String,
     googleId: String,
+    facebookId: String,
+    email: String,
     thumbnail: String
 });
 

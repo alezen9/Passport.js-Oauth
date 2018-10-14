@@ -22,7 +22,7 @@ router.get('/logout',(req,res)=>{
 
 //auth google
 router.get('/google',passport.authenticate('google',{
-    scope:['profile']
+    scope:['profile', 'email']
 }));
 
 //callback route for google to redirect to
@@ -34,11 +34,23 @@ router.get('/google/redirect',passport.authenticate('google'),(req,res)=>{
 
 //auth github
 router.get('/github',passport.authenticate('github',{
-    scope:['profile']
+    scope:['profile','email']
 }));
 
 //callback route for github to redirect to
 router.get('/github/redirect',passport.authenticate('github'),(req,res)=>{
+    //res.send(req.user);
+    res.redirect('/profile/');
+});
+
+
+//auth facebook
+router.get('/facebook',passport.authenticate('facebook',{
+    scope:['email']
+}));
+
+//callback route for facebook to redirect to
+router.get('/facebook/redirect',passport.authenticate('facebook'),(req,res)=>{
     //res.send(req.user);
     res.redirect('/profile/');
 });
