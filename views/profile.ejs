@@ -25,14 +25,17 @@
         </ul>
     </nav>
     <header>
-        <h1>Welcome to your profile</h1>
-        <h3>You logged in using <%= user.provider %></h3>
-        <h2><%= user.username %></h2>
-        <h2><%= user.email %></h2>
-        <img src="<%= user.thumbnail %>" width="130"/>
+        <h1>Welcome to your profile</h1>        
     </header>
     <main>
-        <p>horayyy you did it!</p>
+        <div class="card">
+            <img src="<%= user.thumbnail %>" width="150"/>
+            <div class="content">
+                <h3>You logged in using <%= user.provider %></h3>
+                <h3><%= user.username %></h3>
+                <h3><%= user.email %></h3>
+            </div>
+        </div>
     </main>
 </body>
 </html>
